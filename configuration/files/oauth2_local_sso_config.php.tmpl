@@ -5,7 +5,7 @@ global $DWBN_SSO_CLIENT_ID;
 global $DWBN_SSO_CLIENT_SECRET;
 global $DWBN_SSO_APP_ID;
 
-$DWBN_SSO_BASE          = '{{ salt['pillar.get']('configuration:lookup:sso_base') }}';
-$DWBN_SSO_CLIENT_ID     = "{{ salt['pillar.get']('configuration:lookup:sso_client_id') }}";
-$DWBN_SSO_CLIENT_SECRET = "{{ salt['pillar.get']('configuration:lookup:sso_client_secret') }}";
-$DWBN_SSO_APP_ID        = "{{ salt['pillar.get']('configuration:lookup:sso_app_id') }}";
+$DWBN_SSO_BASE          = '{{ salt['pillar.get']('configuration.sso_base') }}';
+$DWBN_SSO_CLIENT_ID     = "{{ salt['pillar.get']('configuration.sso_client_id') }}";
+$DWBN_SSO_CLIENT_SECRET = "{{ salt['pillar.get']('configuration.sso_client_secret') }}";
+$DWBN_SSO_APP_ID        = "{{ salt['pillar.get']('configuration.sso_app_id') }}";
