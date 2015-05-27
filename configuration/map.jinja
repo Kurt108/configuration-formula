@@ -3,7 +3,7 @@
         'include_sls': ['nginx','php'],
         'extend_service': ['nginx','php5-fpm'],
         'base_src': 'configuration/files',
-        'base_dst': '/var/www/,
+        'base_dst': '/var/www/',
         'src_conf_1': 'config.php.tmpl',
         'src_conf_2': 'oauth2_local_sso_config.php.tmpl',
         'dst_conf_1': 'config/config.local.php',
