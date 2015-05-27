@@ -1,4 +1,4 @@
-{% set config = salt['grains.filter_by']({
+{% set configuration = salt['grains.filter_by']({
     'default': {
         'include_sls': ['nginx','php'],
         'extend_service': ['nginx','php5-fpm'],
