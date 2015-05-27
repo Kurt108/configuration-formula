@@ -1,0 +1,22 @@
+{% set config = salt['grains.filter_by']({
+    'default': {
+        'include_sls': ['nginx','php'],
+        'extend_service': ['nginx','php5-fpm'],
+        'base_src': 'configuration/files',
+        'base_dst': '/var/www/,
+        'src_conf_1': 'config.php.tmpl',
+        'src_conf_2': 'oauth2_local_sso_config.php.tmpl',
+        'dst_conf_1': 'config/config.local.php',
+        'dst_conf_2': 'lib/oauth.php'],
+        'user': 'www-data',
+        'db_host': '127.0.0.1',
+        'db_name': 'db',
+        'db_user': 'username',
+        'db_pass': 'better_change',
+        'sso_base': 'localhost',
+        'sso_client_id': '1234',
+        'sso_client_id_secret': '5678',
+        'sso_app_id': '132132',
+    },
+}, merge=salt['pillar.get']('configuration:lookup')) %}
+

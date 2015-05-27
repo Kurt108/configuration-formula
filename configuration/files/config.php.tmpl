@@ -1,0 +1,9 @@
+<?php
+
+$config = array();
+$config['sql-type']     = 'mysql';
+$config['sql-host']     = '{{ salt['pillar.get']('configuration:lookup:db_host') }}';
+$config['sql-database'] = '{{ salt['pillar.get']('configuration:lookup:db_name') }}';
+$config['sql-username'] = '{{ salt['pillar.get']('configuration:lookup:db_user') }}';
+$config['sql-password'] = '{{ salt['pillar.get']('configuration:lookup:db_pass') }}';
+
