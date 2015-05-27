@@ -8,7 +8,6 @@
     - template: jinja
     - user: {{ configuration.user }}
     - group: {{ configuration.user }}
-    - makedirs: True
     - context:
         configuration: {{ configuration }}
 
@@ -19,6 +18,5 @@
     - template: jinja
     - user: {{ configuration.user }}
     - group: {{ configuration.user }}
-    - makedirs: True
     - context:
         configuration: {{ configuration }}
